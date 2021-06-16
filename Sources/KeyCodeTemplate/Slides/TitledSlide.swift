@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct TitledSlide<Content: View>: View {
-	var title: String
-	@ViewBuilder var content: () -> Content
+public struct TitledSlide<Content: View>: View {
+	public var title: String
+	@ViewBuilder public var content: () -> Content
 	
 	public init(title: String, @ViewBuilder content: @escaping () -> Content) {
 		self.title = title
