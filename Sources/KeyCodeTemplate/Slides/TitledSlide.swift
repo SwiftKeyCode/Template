@@ -16,7 +16,7 @@ public struct TitledSlide<Content: View>: View {
 		self.content = content
 	}
 
-    var body: some View {
+    public var body: some View {
 		VStack {
 			Text(title)
 				.slideSubTitle()
