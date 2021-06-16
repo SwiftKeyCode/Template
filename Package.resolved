@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "KeyCode",
+        "repositoryURL": "https://github.com/SwiftKeyCode/SwiftKeyCode",
+        "state": {
+          "branch": "main",
+          "revision": "2e1ca9b2ba0eb095942295d6bd1355b4e2d1f2b2",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
