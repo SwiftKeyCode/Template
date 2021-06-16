@@ -13,7 +13,7 @@ public struct Kaleidoscope<Content: View>: View {
 
 	@ViewBuilder public var content: () -> Content
 	
-	init(angles: [Angle], radius: CGFloat = 0, @ViewBuilder content: @escaping () -> Content) {
+	public init(angles: [Angle], radius: CGFloat = 0, @ViewBuilder content: @escaping () -> Content) {
 		self.angles = angles
 		self.radius = radius
 		self.content = content
