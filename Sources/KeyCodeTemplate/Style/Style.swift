@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension View {
+public extension View {
 	func withTemplateSlideStyle() -> some View {
 		self
 			.font(.custom("Avenir Next", size: 40))
