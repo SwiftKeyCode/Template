@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import KeyCode
 
 public extension Gradient {
 	func smoothstep(iterations: Int) -> Gradient {
