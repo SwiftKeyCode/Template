@@ -16,17 +16,17 @@ struct AboutMe: View {
 					bullet(0) {
 						Text("I'm a bird")
 					}
-						.highlightedOpacity(onStep: 1, current: step)
+						.showWhen(step >= 1)
 
 					bullet(1) {
 						Text("I'm a plane")
 					}
-						.highlightedOpacity(onStep: 2, current: step)
+					.showWhen(step >= 2)
 
 					bullet(2) {
 						Text("I'm Superman")
 					}
-						.highlightedOpacity(onStep: 3, current: step)
+					.showWhen(step >= 3)
 				}
 			}
 		}
