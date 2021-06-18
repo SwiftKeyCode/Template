@@ -13,17 +13,17 @@ struct AboutMe: View {
 		TitledSlide(title: "Some Facts about Me") {
 			StepDeck(steps: 4) { step in
 				BulletList(BulletBuilder<Text>.dot) { bullet in
-					bullet(0) {
+					bullet {
 						Text("I'm a bird")
 					}
 						.showWhen(step >= 1)
 
-					bullet(1) {
+					bullet {
 						Text("I'm a plane")
 					}
 					.showWhen(step >= 2)
 
-					bullet(2) {
+					bullet {
 						Text("I'm Superman")
 					}
 					.showWhen(step >= 3)
