@@ -10,13 +10,17 @@ import SwiftUI
 
 struct ContentView: View {
 	var body: some View {
-		SlideDeck {
-			Text("This is the Title")
-				.slideTitle()
+		DeckStepperView {
+			Slide {
+				Text("This is the Title")
+					.slideTitle()
+			}
 
-			AboutMe()
+			StepDeck(0 ..< AboutMe.stepCount) {
+				Slide(AboutMe(step: $0))
+			}
 			
-			AnimationSlide()
+			Deck(AnimationSlide.sequence)
 		}
 			.withTemplateSlideStyle()
 	}

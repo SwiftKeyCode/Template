@@ -8,26 +8,28 @@
 import SwiftUI
 import KeyCode
 
-struct AboutMe: View {	
+struct AboutMe: View {
+	static let stepCount = 4
+	
+	var step: Int = 0
+	
     var body: some View {
 		TitledSlide(title: "Some Facts about Me") {
-			StepDeck(steps: 4) { step in
-				BulletList(BulletBuilder<Text>.dot) { bullet in
-					bullet {
-						Text("I'm a bird")
-					}
-						.showWhen(step >= 1)
-
-					bullet {
-						Text("I'm a plane")
-					}
-					.showWhen(step >= 2)
-
-					bullet {
-						Text("I'm Superman")
-					}
-					.showWhen(step >= 3)
+			BulletList(BulletBuilder<Text>.dot) { bullet in
+				bullet {
+					Text("I'm a bird")
 				}
+					.showWhen(step >= 1)
+
+				bullet {
+					Text("I'm a plane")
+				}
+				.showWhen(step >= 2)
+
+				bullet {
+					Text("I'm Superman")
+				}
+				.showWhen(step >= 3)
 			}
 		}
     }
@@ -35,7 +37,9 @@ struct AboutMe: View {
 
 struct Slide1_Previews: PreviewProvider {
     static var previews: some View {
-		AboutMe()
+		DeckStepperView {
+			Slide(AboutMe())
+		}
 			.withTemplateSlideStyle()
     }
 }

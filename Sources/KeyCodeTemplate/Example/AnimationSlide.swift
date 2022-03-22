@@ -9,21 +9,11 @@ import SwiftUI
 import KeyCode
 
 struct AnimationSlide: View {
-	struct State: View {
-		var leftOpacity: Double = 0
-		var rightOpacity: Double = 0
-				
-		var body: some View {
-			HStack {
-				Rectangle().opacity(leftOpacity)
-				
-				Rectangle().opacity(rightOpacity)
-			}
-		}
-	}
+	var leftOpacity: Double = 0
+	var rightOpacity: Double = 0
 	
-	var sequence: [State] {
-		var sequence: Sequencer<State> = .init(initialState: State())
+	static var sequence: [AnimationSlide] {
+		var sequence: Sequencer<AnimationSlide> = .init(initialState: AnimationSlide())
 		
 		sequence[\.leftOpacity] = 1
 
@@ -41,7 +31,11 @@ struct AnimationSlide: View {
 
 	var body: some View {
 		EmptySlide {
-			StateDeck.view(sequence)
+			HStack {
+				Rectangle().opacity(leftOpacity)
+				
+				Rectangle().opacity(rightOpacity)
+			}
 		}
 	}
 }

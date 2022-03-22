@@ -13,7 +13,6 @@ public extension View {
 			.font(.custom("Avenir Next", size: 40))
 			.frame(minWidth: 800, maxWidth: .infinity, minHeight: 600, maxHeight: .infinity)
 			.background(LinearGradient.presentation)
-			.withSlideController()
 			.hideMouseOnInactivity(seconds: 1)
 	}
 }
