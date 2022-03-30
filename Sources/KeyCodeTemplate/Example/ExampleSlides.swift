@@ -20,7 +20,7 @@ struct ContentView: View {
 				Slide(AboutMe(step: $0))
 			}
 			
-			Deck(AnimationSlide.sequence)
+			SequenceDeck(AnimationSlide.sequence)
 		}
 			.withTemplateSlideStyle()
 	}
