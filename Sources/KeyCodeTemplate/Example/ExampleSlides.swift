@@ -16,7 +16,7 @@ struct ContentView: View {
 					.slideTitle()
 			}
 
-			StepDeck(0 ..< AboutMe.stepCount) {
+			ForEachDeck(0 ..< AboutMe.stepCount) {
 				Slide(AboutMe(step: $0))
 			}
 			
